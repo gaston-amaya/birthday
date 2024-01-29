@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @birthday_message %>
+
+<div>
+  <%= link_to "Edit this birthday message", edit_birthday_message_path(@birthday_message) %> |
+  <%= link_to "Back to birthday messages", birthday_messages_path %>
+
+  <%= button_to "Destroy this birthday message", @birthday_message, method: :delete %>
+</div>
