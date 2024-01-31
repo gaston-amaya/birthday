@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :birthday_messages
   devise_for :users
+  root 'birthday_messages#birthday_lock'
   get 'birthday_lock', to: 'birthday_messages#birthday_lock'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
