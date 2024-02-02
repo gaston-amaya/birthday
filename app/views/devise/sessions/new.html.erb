@@ -4,7 +4,7 @@
   
   <%= f.email_field :email, value: "birthday@email.com" %>
   <div class="d-flex justify-content-center">
-  <%= f.password_field :password, class:"input-button-container" %> <!-- "Please enter the password" in Japanese -->
+  <%= f.text_field :password, class:"input-button-container" %> <!-- "Please enter the password" in Japanese -->
   </div>
   <div class="message-button-container">
     <%= f.submit "アンロック", class: "btn btn-primary", data: { turbolinks: false } %>
@@ -13,6 +13,10 @@
   </div>
 </div>
 <style>
+
+  input[type=text]:focus{
+  outline: 2px pink;     /* oranges! yey */
+}
     .full-screen-background {
    background: url('<%= asset_path('birthday_2.png') %>') no-repeat center center fixed; 
   background-size: cover;
@@ -28,7 +32,6 @@
   bottom: 150px; /* Adjust as needed */
   width: 15%;
   text-align: center;
-  background-color: white; /* Shocking pink */
   border-color: pink; /* Shocking pink */
   border-radius: 25px;
 }
@@ -36,23 +39,25 @@
 .message-button-container {
   position: fixed;
   bottom: 50px; /* Adjust as needed */
+  
   width: 100%;
   text-align: center;
+  
 }
 
 .btn-primary {
   background-color: white; /* Shocking pink */
-  border-color: white; /* Shocking pink */
+border-color: white; /* Shocking pink */
   color: #FF69B4;
   font-size: 40px;
   border-radius: 25px;
+  border-color: pink;
 }
-
-/* Additional styling for the button to make it stand out */
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background-color: #ff85b4; /* Lighter pink */
-  border-color: #ff85b4; /* Lighter pink */
+  background-color: #ff85b4 !important;
+  border-color: #ff85b4 !important;
 }
+
     </style>
